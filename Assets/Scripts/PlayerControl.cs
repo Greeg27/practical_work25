@@ -66,7 +66,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Turn()
     {
-        if (_vertical > 0.1)
+        if (_vertical > 0.1 || _vertical < -0.1)
         {
             transform.LookAt(new Vector3(_playerTarget.x, transform.position.y, _playerTarget.z));
         }
